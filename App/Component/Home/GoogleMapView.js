@@ -11,15 +11,15 @@ export default function GoogleMapView() {
   });
 
   return (
-    <View style={{marginTop: 20}}>
+    <View style={{marginTop: 20, borderRadius:20, overflow:'hidden'}}>
       <MapView style={{ 
-      width: Dimensions.get('screen').width*0.89,
+      width: Dimensions.get('screen').width,
       height: Dimensions.get('screen').height*0.23,
-      borderRadius:20
+
     }}
       provider={PROVIDER_GOOGLE}
       showsUserLocation={true}
-      followsUserLocation={true}
+      showsMyLocationButton={true}
       region={mapRegion} >
 
         </MapView>
