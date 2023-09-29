@@ -1,14 +1,27 @@
 import { View, Text } from 'react-native'
-import React from 'react'
+import React, { useEffect } from 'react'
 import Header from '../Component/Home/Header'
 import GoogleMapView from '../Component/Home/GoogleMapView'
 import CategoryList from '../Component/Home/CategoryList'
+import GlobalApi from '../Services/GlobalApi'
 
 export default function Home() {
+  useEffect(()=>{
+    GetNearBySearchPlace();
+  },[])
+  
+  const GetNearBySearchPlace=()=>{
+    GlobalApi.nearByPlace().then(res=>{
+      console.log(res.data);
+      
+    }).catch(err=> console.log(err);
+    )
+  }
   return (
-    <View style={{ padding:10 }}>
+    <View style={{ padding:10,flex:1 }}>
       <Header/>
       <GoogleMapView/>
+
       <CategoryList/>
     </View>
   )

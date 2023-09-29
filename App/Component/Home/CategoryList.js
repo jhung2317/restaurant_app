@@ -7,7 +7,7 @@ export default function CategoryList() {
     {
       id:1,
       name:'酒樓',
-      value:'gas_station',
+      value:'Chinese_restaurant',
       icon:require('./../../../assets/dim-sum.png')
     },
     {
@@ -23,9 +23,9 @@ export default function CategoryList() {
       icon:require('./../../../assets/cafe.png')
     },
     {
-      id:3,
-      name:'Cafe',
-      value:'cafe',
+      id:4,
+      name:'Convenience Store',
+      value:'convenience_store',
       icon:require('./../../../assets/cafe.png')
     },
   ]
