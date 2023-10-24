@@ -14,8 +14,7 @@ export default function Home() {
     GlobalApi.nearByPlace().then(res=>{
       console.log(res.data);
       
-    }).catch(err=> console.log(err);
-    )
+    })
   }
   return (
     <View style={{ padding:10,flex:1 }}>

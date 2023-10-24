@@ -9,6 +9,8 @@ export default function GoogleMapView() {
   useEffect(() => {
     if(location)
     {
+
+      
         setMapRegion({
             latitude: location.coords.latitude,
             longitude: location.coords.longitude,
